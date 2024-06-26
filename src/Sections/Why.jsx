@@ -38,12 +38,12 @@ const Why = () => {
     });
     gsap.from(shape.current, {
       duration: 10,
-      x : -400,
+      x : -600,
       rotate : 180,
       opacity : .5,
       scrollTrigger: {
         trigger: image.current,
-        start: "top 80%", // when the top of the element hits 80% of the viewport height
+        start: "top 100%", // when the top of the element hits 80% of the viewport height
         end: "top 20%", // Adjust the end position based on your needs
         scrub: true, // Makes the animation smooth
         // markers: true // Enable markers for debugging

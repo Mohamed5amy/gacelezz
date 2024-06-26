@@ -12,6 +12,7 @@ import { Portfolio } from "../Sections/Portfolio";
 import Niches from "../Sections/Niches";
 import Reviews from "../Sections/Reviews";
 import FAQs from "../Sections/FAQs";
+import Footer from "../components/Footer";
 
 const Home = () => {
 
@@ -43,6 +44,7 @@ const Home = () => {
           <Niches />
           <Reviews />
           <FAQs />
+          <Footer />
         </div>
       
     </Stack>
