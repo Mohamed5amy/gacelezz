@@ -1,0 +1,24 @@
+
+@mixin center($x) {
+  transform: translate($x);
+  -webkit-transform: translate($x);
+  -moz-transform: translate($x);
+  -ms-transform: translate($x);
+  -o-transform: translate($x);
+}
+
+@mixin tra($x) {
+  transition: $x;
+  -webkit-transition: $x;
+  -moz-transition: $x;
+  -ms-transition: $x;
+  -o-transition: $x;
+}
+
+@mixin rad($x) {
+  border-radius: $x;
+  -webkit-border-radius: $x;
+  -moz-border-radius: $x;
+  -ms-border-radius: $x;
+  -o-border-radius: $x;
+}

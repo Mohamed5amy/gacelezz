@@ -1,0 +1,175 @@
+@use "./colors" as *;
+@import "./mixins";
+
+
+.Navbar {
+  .list {
+    a {
+      font-weight: 400;
+      @include tra(.5s);
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: -5px;
+        left: 50%;
+        @include center((-50% , 0));
+        width: 0;
+        height: 2px;
+        background-color: $main;
+        @include tra(.5s);
+      }
+
+      &:hover {
+        color: $main;
+
+        &::before {
+          width: 70%;
+          transform: rotate(4deg);
+          -webkit-transform: rotate(4deg);
+          -moz-transform: rotate(4deg);
+          -ms-transform: rotate(4deg);
+          -o-transform: rotate(4deg);
+        }
+        
+      }
+
+      &.active {
+        color: $main;
+
+        &::before {
+          width: 30%;
+        }
+        
+        &:hover {
+          &::before {
+            width: 70%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width : 900px) {
+  .Navbar {
+
+    img {
+      max-width: 70px !important;
+    }
+
+    .list {
+      position: absolute;
+      background: rgb(29, 6, 6);
+      flex-direction: column;
+      z-index: 1000;
+      top: 110.25px;
+      width: 100%;
+      left: 0;
+      gap: 20px;
+      padding: 50px;
+      font-weight: 500;
+      text-align: center;
+      margin-left: 0;
+
+      &.active {
+        display: flex !important;
+      }
+      
+      a {
+        margin-left: 0;
+  
+        &:hover {
+          color: $main;
+  
+          &::before {
+            width: 50px;
+          }
+          
+        }
+  
+        &.active {
+          color: $main;
+  
+          &::before {
+            width: 40px;
+          }
+          
+          &:hover {
+            &::before {
+              width: 50px;
+            }
+          }
+        }
+        
+        
+      }
+    }
+
+  }
+}
+
+.por_taps {
+  font-weight: 700;
+  font-size: 18px;
+  @include tra(.5s);
+  position: relative;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    @include center((-50% , 0));
+    width: 0;
+    height: 2px;
+    background-color: $main;
+    @include tra(.5s);
+  }
+
+  &:hover {
+    color: $main;
+
+    &::before {
+      width: 70%;
+    }
+    
+  }
+
+  &.active {
+    color: $main;
+
+    &::before {
+      width: 30%;
+    }
+    
+    &:hover {
+      &::before {
+        width: 70%;
+      }
+    }
+  }
+}
+
+.niches .swiper-wrapper {
+  transition-timing-function: linear !important;
+}
+
+// Swiper bullets
+.swiper-pagination-bullet {
+  background-color: #F5F5F5;
+  @include rad(12px);
+  opacity: 0.12;
+  width: 12px;
+  height: 12px;
+  @include tra(.5s);
+  margin: 0 3px !important;
+
+  &.swiper-pagination-bullet-active {
+    width: 33px;
+    background-color: $main;
+    opacity: 1;
+  }
+}
