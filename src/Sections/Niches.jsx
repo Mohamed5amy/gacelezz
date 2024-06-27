@@ -17,11 +17,34 @@ import n11 from "../images/n11.png"
 import n12 from "../images/n12.png"
 import n13 from "../images/n13.png"
 import n14 from "../images/n14.png"
+import { useEffect, useRef } from "react";
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Niches = () => {
+
+    const box1 = useRef(null)
+
+    useEffect(() => {
+        gsap.from(box1.current, {
+            duration: 1,
+            y : 50,
+            opacity : 0,
+            scrollTrigger: {
+              trigger: box1.current,
+              start: "top 80%", // when the top of the element hits 80% of the viewport height
+              end: "top 50%", // when the top of the element hits 80% of the viewport height
+              scrub: true, // Makes the animation smooth
+              markers: false // Enable markers for debugging
+            }
+          });
+    } , [])
+    
   return (
     <Stack bgcolor={"#180203"} px={{xs : 10 , sm : 20 , md : 20 , lg : 50}} py={{xs : 30 , sm : 40}} className="niches">
-      <Typography fontWeight={700} fontSize={{ xs: 24, md: 32 }} lineHeight={"140%"} color={"primary.white"} textAlign={"center"} mb={20} > <span style={{color : "#EC1C24"}} >Niches</span> Worked With </Typography>
+      <Typography ref={box1} fontWeight={700} fontSize={{ xs: 24, md: 32 }} lineHeight={"140%"} color={"primary.white"} textAlign={"center"} mb={20} > <span style={{color : "#EC1C24"}} >Niches</span> Worked With </Typography>
       <LeftSwipe />
       <Stack height={24} ></Stack>
       <RightSwipe />

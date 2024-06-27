@@ -4,12 +4,52 @@ import { Autoplay , Pagination } from 'swiper/modules';
 import 'swiper/swiper-bundle.css';
 import 'swiper/css';
 import revImg from "../images/review.png"
+import { useEffect, useRef } from "react";
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
+
 
 const Reviews = () => {
+
+    const box1 = useRef(null)
+    const box2 = useRef(null)
+
+    useEffect(() => {
+
+        gsap.from(box1.current, {
+            duration: 1,
+            y : 50,
+            opacity : 0,
+            scrollTrigger: {
+              trigger: box1.current,
+              start: "top 80%", // when the top of the element hits 80% of the viewport height
+              end: "top 50%", // when the top of the element hits 80% of the viewport height
+              scrub: true, // Makes the animation smooth
+              markers: false // Enable markers for debugging
+            }
+        });
+
+        gsap.from(box2.current, {
+            duration: 1,
+            y : 30,
+            opacity : 0,
+            scrollTrigger: {
+                trigger: box2.current,
+                start: "top 80%", // when the top of the element hits 80% of the viewport height
+                end: "top 50%", // when the top of the element hits 80% of the viewport height
+                scrub: true, // Makes the animation smooth
+                markers: false // Enable markers for debugging
+            }
+        });
+        
+    } , [])
+    
   return (
     <Stack bgcolor={"#180203"} px={{xs : 10 , sm : 20 , md : 20 , lg : 50}} py={{xs : 30 , sm : 40}}>
-      <Typography fontWeight={400} fontSize={16} lineHeight={"140%"} color={"primary.white"} textAlign={"center"} mb={8} >Reviews</Typography>
-      <Typography fontWeight={700} fontSize={{ xs: 24, md: 32 }} lineHeight={"140%"} color={"primary.white"} textAlign={"center"} mb={20} > What our best clients say about <span style={{color : "#EC1C24"}} >Gacelezz</span> </Typography>
+      <Typography ref={box1} fontWeight={400} fontSize={16} lineHeight={"140%"} color={"primary.white"} textAlign={"center"} mb={8} >Reviews</Typography>
+      <Typography ref={box2} fontWeight={700} fontSize={{ xs: 24, md: 32 }} lineHeight={"140%"} color={"primary.white"} textAlign={"center"} mb={20} > What our best clients say about <span style={{color : "#EC1C24"}} >Gacelezz</span> </Typography>
       <Swiper 
         slidesPerView={3} 
         spaceBetween={16}

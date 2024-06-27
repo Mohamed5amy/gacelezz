@@ -12,6 +12,8 @@ const How = () => {
   const svgRef2 = useRef(null);
   const svgRef3 = useRef(null);
   const svgRef4 = useRef(null);
+  const box1 = useRef(null)
+
 
   useEffect(() => {
     // 1
@@ -114,22 +116,35 @@ const How = () => {
         }
       );
     });
+
+    gsap.from(box1.current, {
+      duration: 1,
+      y : 50,
+      opacity : 0,
+      scrollTrigger: {
+        trigger: box1.current,
+        start: "top 80%", // when the top of the element hits 80% of the viewport height
+        end: "top 50%", // when the top of the element hits 80% of the viewport height
+        scrub: true, // Makes the animation smooth
+        markers: false // Enable markers for debugging
+      }
+    });
   }, []);
   
   return (
     <Stack px={{xs : 10 , sm : 20 , md : 20 , lg : 50}} py={{xs : 30 , sm : 40}} bgcolor={"#130202"}>
 
-      <Typography fontWeight={700} fontSize={{ xs: 24, md: 32 }} lineHeight={"140%"} color={"primary.white"} textAlign={"center"} mb={20} > How it <span style={{color : "#EC1C24"}} >works</span> </Typography>
+      <Typography ref={box1} fontWeight={700} fontSize={{ xs: 24, md: 32 }} lineHeight={"140%"} color={"primary.white"} textAlign={"center"} mb={20} > How it <span style={{color : "#EC1C24"}} >works</span> </Typography>
 
       <Stack spacing={60} >
         {/* Num 1 */}
         <Stack justifyContent={"space-between"} spacing={20} direction={{xs : "column" , md : "row"}} alignItems={"center"}>
           {/* Text */}
           <Stack direction={"row"} spacing={8} alignItems={"center"} maxWidth={760}>
-            <Typography fontSize={128} fontWeight={700} color={"transparent"} sx={{WebkitTextStrokeWidth : "1px" , WebkitTextStrokeColor : "rgba(236, 28, 36, 0.24)"}} > 1 </Typography>
+            <Typography data-aos="fade-right" fontSize={128} fontWeight={700} color={"transparent"} sx={{WebkitTextStrokeWidth : "1px" , WebkitTextStrokeColor : "rgba(236, 28, 36, 0.24)"}} > 1 </Typography>
             <Stack spacing={12}>
-              <Typography color={"primary.white"} fontSize={{xs : 18 , sm : 32}} fontWeight={700}>Get on board</Typography>
-              <Typography color={"text.secondary"}>contact us to know your vision and discuss goals and pricing.</Typography>
+              <Typography data-aos="fade-up" data-aos-delay="200" color={"primary.white"} fontSize={{xs : 18 , sm : 32}} fontWeight={700}>Get on board</Typography>
+              <Typography data-aos="fade-up" data-aos-delay="400" color={"text.secondary"}>contact us to know your vision and discuss goals and pricing.</Typography>
             </Stack>
           </Stack>
           {/* Logo */}
@@ -147,10 +162,10 @@ const How = () => {
         <Stack justifyContent={"space-between"} spacing={20} direction={{xs : "column" , md : "row-reverse"}} alignItems={"center"}>
           {/* Text */}
           <Stack direction={"row"} spacing={8} alignItems={"center"} maxWidth={760}>
-            <Typography fontSize={128} fontWeight={700} color={"transparent"} sx={{WebkitTextStrokeWidth : "1px" , WebkitTextStrokeColor : "rgba(236, 28, 36, 0.24)"}} > 2 </Typography>
+            <Typography data-aos="fade-right" fontSize={128} fontWeight={700} color={"transparent"} sx={{WebkitTextStrokeWidth : "1px" , WebkitTextStrokeColor : "rgba(236, 28, 36, 0.24)"}} > 2 </Typography>
             <Stack spacing={12}>
-              <Typography color={"primary.white"} fontSize={{xs : 18 , sm : 32}} fontWeight={700}>Provide material/choose services </Typography>
-              <Typography color={"text.secondary"}>We&apos;re excited to hear from you and discuss how we can bring your vision to life through our video production services.</Typography>
+              <Typography data-aos="fade-up" data-aos-delay="200" color={"primary.white"} fontSize={{xs : 18 , sm : 32}} fontWeight={700}>Provide material/choose services </Typography>
+              <Typography data-aos="fade-up" data-aos-delay="400" color={"text.secondary"}>We&apos;re excited to hear from you and discuss how we can bring your vision to life through our video production services.</Typography>
             </Stack>
           </Stack>
           {/* Logo */}
@@ -166,10 +181,10 @@ const How = () => {
         <Stack justifyContent={"space-between"} spacing={20} direction={{xs : "column" , md : "row"}} alignItems={"center"}>
           {/* Text */}
           <Stack direction={"row"} spacing={8} alignItems={"center"} maxWidth={760}>
-            <Typography fontSize={128} fontWeight={700} color={"transparent"} sx={{WebkitTextStrokeWidth : "1px" , WebkitTextStrokeColor : "rgba(236, 28, 36, 0.24)"}} > 3 </Typography>
+            <Typography data-aos="fade-right" fontSize={128} fontWeight={700} color={"transparent"} sx={{WebkitTextStrokeWidth : "1px" , WebkitTextStrokeColor : "rgba(236, 28, 36, 0.24)"}} > 3 </Typography>
             <Stack spacing={12}>
-              <Typography color={"primary.white"} fontSize={{xs : 18 , sm : 32}} fontWeight={700}>Production finishes in under 48-72 hours</Typography>
-              <Typography color={"text.secondary"}>Sure, take your time. If you have any questions or need further assistance, feel free to let me know!</Typography>
+              <Typography data-aos="fade-up" data-aos-delay="200" color={"primary.white"} fontSize={{xs : 18 , sm : 32}} fontWeight={700}>Production finishes in under 48-72 hours</Typography>
+              <Typography data-aos="fade-up" data-aos-delay="400" color={"text.secondary"}>Sure, take your time. If you have any questions or need further assistance, feel free to let me know!</Typography>
             </Stack>
           </Stack>
           {/* Logo */}
@@ -185,10 +200,10 @@ const How = () => {
         <Stack justifyContent={"space-between"} spacing={20} direction={{xs : "column" , md : "row-reverse"}} alignItems={"center"}>
           {/* Text */}
           <Stack direction={"row"} spacing={8} alignItems={"center"} maxWidth={760}>
-            <Typography fontSize={128} fontWeight={700} color={"#130202"} sx={{WebkitTextStrokeWidth : "1px" , WebkitTextStrokeColor : "rgba(236, 28, 36, 0.24)"}} > 4 </Typography>
+            <Typography data-aos="fade-right" fontSize={128} fontWeight={700} color={"#130202"} sx={{WebkitTextStrokeWidth : "1px" , WebkitTextStrokeColor : "rgba(236, 28, 36, 0.24)"}} > 4 </Typography>
             <Stack spacing={12}>
-              <Typography color={"primary.white"} fontSize={{xs : 18 , sm : 32}} fontWeight={700}>We Provide analytics and strategies </Typography>
-              <Typography color={"text.secondary"}>Absolutely, I&apos;m here whenever you&apos;re ready. Just let me know if there&apos;s anything specific you need assistance with.</Typography>
+              <Typography data-aos="fade-up" data-aos-delay="200" color={"primary.white"} fontSize={{xs : 18 , sm : 32}} fontWeight={700}>We Provide analytics and strategies </Typography>
+              <Typography data-aos="fade-up" data-aos-delay="400" color={"text.secondary"}>Absolutely, I&apos;m here whenever you&apos;re ready. Just let me know if there&apos;s anything specific you need assistance with.</Typography>
             </Stack>
           </Stack>
           {/* Logo */}

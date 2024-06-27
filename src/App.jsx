@@ -2,10 +2,18 @@ import { ThemeProvider } from "@emotion/react";
 import { createTheme } from "@mui/material";
 import Home from "./pages/Home";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import 'atropos/css'
 
+
+
+AOS.init({
+  duration : 1000,
+  // once : true
+});
 
 function App() {
-
 
   const theme = createTheme({
     palette : {

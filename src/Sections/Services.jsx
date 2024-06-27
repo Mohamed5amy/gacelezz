@@ -1,14 +1,80 @@
 import { Button, Grid, Stack, Typography } from "@mui/material";
+import { useEffect, useRef } from "react";
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
+
 
 const Services = () => {
+
+  const box1 = useRef(null)
+  const box2 = useRef(null)
+  const box3 = useRef(null)
+  const box4 = useRef(null)
+  
+  useEffect(() => {
+
+    gsap.from(box1.current, {
+      duration: 1,
+      rotate : "-5deg",
+      y : 50,
+      scrollTrigger: {
+        trigger: box1.current,
+        start: "top 80%", // when the top of the element hits 80% of the viewport height
+        end: "top 0%", // when the top of the element hits 80% of the viewport height
+        scrub: true, // Makes the animation smooth
+        markers: false // Enable markers for debugging
+      }
+    });
+
+    gsap.from(box2.current, {
+      duration: 1,
+      y : 50,
+      scrollTrigger: {
+        trigger: box2.current,
+        start: "top 80%", // when the top of the element hits 80% of the viewport height
+        end: "top 0%", // when the top of the element hits 80% of the viewport height
+        scrub: true, // Makes the animation smooth
+        markers: false // Enable markers for debugging
+      }
+    });
+
+    gsap.from(box3.current, {
+      duration: 1,
+      rotate : "5deg",
+      y : 50,
+      scrollTrigger: {
+        trigger: box3.current,
+        start: "top 80%", // when the top of the element hits 80% of the viewport height
+        end: "top 0%", // when the top of the element hits 80% of the viewport height
+        scrub: true, // Makes the animation smooth
+        markers: false // Enable markers for debugging
+      }
+    });
+
+    gsap.from(box4.current, {
+      duration: 1,
+      y : 50,
+      opacity : 0,
+      scrollTrigger: {
+        trigger: box4.current,
+        start: "top 80%", // when the top of the element hits 80% of the viewport height
+        end: "top 50%", // when the top of the element hits 80% of the viewport height
+        scrub: true, // Makes the animation smooth
+        markers: false // Enable markers for debugging
+      }
+    });
+    
+  } , [])
   
   return (
     <Stack px={{xs : 10 , sm : 20 , md : 20 , lg : 50}} py={{xs : 20 , sm : 40}} bgcolor={"primary.bg2"}>
 
-      <Typography fontWeight={700} fontSize={{ xs: 24, md: 32 }} lineHeight={"140%"} color={"primary.white"} textAlign={"center"} mb={24} > Increase your engagement by <span style={{color : "#EC1C24"}} >50%</span> or <span style={{color : "#EC1C24"}} >get your money back.</span> </Typography>
+      <Typography ref={box4} fontWeight={700} fontSize={{ xs: 24, md: 32 }} lineHeight={"140%"} color={"primary.white"} textAlign={"center"} mb={24} > Increase your engagement by <span style={{color : "#EC1C24"}} >50%</span> or <span style={{color : "#EC1C24"}} >get your money back.</span> </Typography>
 
       <Grid container spacing={16}>
-        <Grid item xs={12} md={6} lg={4}>
+        <Grid item xs={12} md={6} lg={4} ref={box1}>
           <Stack alignItems={"center"} height={"100%"} bgcolor={"primary.box"} p={"40px 16px"} borderRadius={"16px"} border={"1px solid #453838"} 
           sx={{
             transition : ".5s" , 
@@ -39,7 +105,7 @@ const Services = () => {
             </Typography>
           </Stack>
         </Grid>
-        <Grid item xs={12} md={6} lg={4}>
+        <Grid item xs={12} md={6} lg={4} ref={box2}>
           <Stack alignItems={"center"} height={"100%"} bgcolor={"primary.box"} p={"40px 16px"} borderRadius={"16px"} border={"1px solid #453838"} 
           sx={{
             transition : ".5s" , 
@@ -69,7 +135,7 @@ const Services = () => {
             </Typography>
           </Stack>
         </Grid>
-        <Grid item xs={12} md={6} lg={4}>
+        <Grid item xs={12} md={6} lg={4} ref={box3}>
           <Stack alignItems={"center"} height={"100%"} bgcolor={"primary.box"} p={"40px 16px"} borderRadius={"16px"} border={"1px solid #453838"} 
           sx={{
             transition : ".5s" , 

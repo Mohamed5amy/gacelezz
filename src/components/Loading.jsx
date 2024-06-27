@@ -15,11 +15,11 @@ const Loading = () => {
     gsap.to(iconRef.current, { rotation: 0, duration: 1 , width : 170 , delay : .5 });
     gsap.to(textRef.current, { duration: 1 , width : 265 , delay : .5 });
     gsap.to(containerRef.current, { duration : .8 , delay: 1.5 , opacity : 0 , y : 500 , scale : .7 });
-    gsap.to(parentRef.current, { duration : .1 , delay: 2.5 , display : "none"});
+    gsap.to(parentRef.current, { duration : .5 , delay: 2.5 , opacity : 0 , display : "none"});
   } , [])
   
   return (
-    <Stack width={"100%"} height={"100vh"} bgcolor={"primary.bg"} justifyContent={"center"} alignItems={"center"} overflow={"hidden"} ref={parentRef} position={"absolute"} left={0} top={0} zIndex={10}>
+    <Stack width={"100%"} height={"100vh"} bgcolor={"primary.bg"} justifyContent={"center"} alignItems={"center"} overflow={"hidden"} ref={parentRef} position={"fixed"} left={0} top={0} zIndex={10}>
       <div ref={containerRef}>
         <Stack alignItems={"center"} sx={{scale : {xs : ".8" , sm : "1" }}}>
           <img src={icon} alt="Logo Icon" style={{rotate : "-65deg"}} width={230} ref={iconRef} />
