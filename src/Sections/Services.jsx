@@ -69,7 +69,7 @@ const Services = () => {
   } , [])
   
   return (
-    <Stack px={{xs : 10 , sm : 20 , md : 20 , lg : 50}} py={{xs : 20 , sm : 40}} bgcolor={"primary.bg2"}>
+    <Stack px={{xs : 10 , sm : 20 , md : 20 , lg : 50}} py={{xs : 20 , sm : 40}} bgcolor={"primary.bg2"} id="services">
 
       <Typography ref={box4} fontWeight={700} fontSize={{ xs: 24, md: 32 }} lineHeight={"140%"} color={"primary.white"} textAlign={"center"} mb={24} > Increase your engagement by <span style={{color : "#EC1C24"}} >50%</span> or <span style={{color : "#EC1C24"}} >get your money back.</span> </Typography>
 
@@ -178,7 +178,8 @@ const Services = () => {
       </Grid>
       
       <Stack alignItems={"center"} mt={24}>
-        <Button variant="contained" sx={{padding : "16px 50px" , borderRadius : "16px" , transition : ".5s" , "&:hover": {px : "60px"}}}> Let&apos;s Start </Button>
+        <a href="#faqs"><Button variant="contained" sx={{padding : "16px 50px" , borderRadius : "16px" , transition : ".5s" , "&:hover": {px : "60px"}}}> Let&apos;s Start </Button>
+        </a>
       </Stack>
       
     </Stack>

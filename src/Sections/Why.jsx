@@ -62,7 +62,7 @@ const Why = () => {
   }, []);
   
   return (
-    <Stack direction={{xs : "column" , md : "row"}} px={{xs : 10 , sm : 20 , md : 20 , lg : 50}} py={{xs : 20 , sm : 50}} bgcolor={"#130202"} justifyContent={"space-between"} spacing={12} >
+    <Stack direction={{xs : "column" , md : "row"}} px={{xs : 10 , sm : 20 , md : 20 , lg : 50}} py={{xs : 20 , sm : 50}} bgcolor={"#130202"} justifyContent={"space-between"} spacing={12} id="why">
 
       {/* Text */}
       <Stack>
@@ -73,10 +73,12 @@ const Why = () => {
         Our expert team of scriptwriters, thumbnail artists, voice-over artists, and video editors ensures your videos achieve better quality, more engagement, and higher views. Trust us to help your YouTube channel grow faster.
         </Typography>
 
-        <Button variant="outlined" sx={{padding : "16px 56px" , borderRadius : "16px" , transition : ".5s" , border : "1px solid", borderColor : "primary.white" , width : "fit-content" , "&:hover" : {
-          borderColor : "primary.main",
-          px : "66px"
-        }}}> Contact Us </Button>
+        <a href="#faqs">
+          <Button variant="outlined" sx={{padding : "16px 56px" , borderRadius : "16px" , transition : ".5s" , border : "1px solid", borderColor : "primary.white" , width : "fit-content" , "&:hover" : {
+            borderColor : "primary.main",
+            px : "66px"
+          }}}> Contact Us </Button>
+        </a>
 
       </Stack>
       

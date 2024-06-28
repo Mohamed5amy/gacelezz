@@ -1,7 +1,6 @@
 import { Button, Stack } from "@mui/material";
 import logo from "../images/logo.svg"
 import { useEffect, useRef, useState } from "react";
-import { NavLink } from "react-router-dom";
 import MenuIcon from '@mui/icons-material/Menu';
 import {gsap} from "gsap";
 
@@ -46,13 +45,13 @@ const List = ({active , setActive}) => {
   
   return (
     <Stack color={"primary.white"} spacing={!active ? {md : 8 , lg : 18} : 0} direction={"row"} className={`list ${active ? "active" : "" }`} display={{ xs : "none" , md : "flex" }} ref={containerRef}>
-      <NavLink onClick={() => setActive(false)} to="/" >Home</NavLink>
-      <NavLink onClick={() => setActive(false)} to="/about">Services</NavLink>
-      <NavLink onClick={() => setActive(false)} to="/events">Packages</NavLink>
-      <NavLink onClick={() => setActive(false)} to="/events">How it works</NavLink>
-      <NavLink onClick={() => setActive(false)} to="/events">Portfolio</NavLink>
-      <NavLink onClick={() => setActive(false)} to="/events">Reviews</NavLink>
-      <NavLink onClick={() => setActive(false)} to="/events">FAQs</NavLink>
+      <a onClick={() => setActive(false)} href="/" >Home</a>
+      <a onClick={() => setActive(false)} href="#services">Services</a>
+      <a onClick={() => setActive(false)} href="#packages">Packages</a>
+      <a onClick={() => setActive(false)} href="#how">How it works</a>
+      <a onClick={() => setActive(false)} href="#portfolio">Portfolio</a>
+      <a onClick={() => setActive(false)} href="#reviews">Reviews</a>
+      <a onClick={() => setActive(false)} href="#faqs">FAQs</a>
     </Stack>
   )
 }

@@ -32,7 +32,7 @@ const Packages = () => {
   
   
   return (
-    <Stack px={{xs : 10 , sm : 20 , md : 20 , lg : 50}} py={{xs : 30 , sm : 60}} alignItems={"center"} position={"relative"} bgcolor={"primary.box"}>
+    <Stack px={{xs : 10 , sm : 20 , md : 20 , lg : 50}} py={{xs : 30 , sm : 60}} alignItems={"center"} position={"relative"} bgcolor={"primary.box"} id="packages">
       
       <Typography position={"relative"} zIndex={1} ref={box1} fontWeight={700} fontSize={{ xs: 24, md: 32 }} lineHeight={"140%"} color={"primary.white"} textAlign={"center"} mb={24} maxWidth={1035} >We offer a range of <span style={{color : "#EC1C24"}} >comprehensive packages</span> designed to meet the diverse needs of your YouTube channel. </Typography>
 
@@ -112,7 +112,9 @@ const Packages = () => {
           </Grid>
         </Grid>
         <Stack alignItems={"center"} mt={20}>
-          <Button variant="contained" sx={{padding : "24px 80px" , borderRadius : "16px" , transition : ".5s" , "&:hover": {px : "90px"}}}> Book Now</Button>
+          <a href="#faqs">
+            <Button variant="contained" sx={{padding : "24px 80px" , borderRadius : "16px" , transition : ".5s" , "&:hover": {px : "90px"}}}> Book Now</Button>
+          </a>
         </Stack>
       </Box>
 
@@ -180,7 +182,9 @@ const Packages = () => {
           </Grid>
         </Grid>
         <Stack alignItems={"center"} mt={20}>
-          <Button variant="contained" sx={{padding : "24px 80px" , borderRadius : "16px" , transition : ".5s" , "&:hover": {px : "90px"}}}> Book Now</Button>
+          <a href="#faqs">
+            <Button variant="contained" sx={{padding : "24px 80px" , borderRadius : "16px" , transition : ".5s" , "&:hover": {px : "90px"}}}> Book Now</Button>
+          </a>
         </Stack>
       </Box>
     </Stack>

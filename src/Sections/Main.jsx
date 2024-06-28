@@ -10,7 +10,7 @@ const Main = () => {
 
   return (
 
-    <Stack px={{xs : 10 , sm : 20 , md : 20 , lg : 50}} py={{xs : 30 , sm : 60}} alignItems={"center"} position={"relative"} overflow={"hidden"} bgcolor={"primary.bg"}>
+    <Stack px={{xs : 10 , sm : 20 , md : 20 , lg : 50}} py={{xs : 30 , sm : 60}} alignItems={"center"} position={"relative"} overflow={"hidden"} bgcolor={"primary.bg"} id="/">
 
       <Stack position={"absolute"} left={0} top={0} height={"100%"} width={"100%"}><img src={bg} alt="Waves" style={{objectFit : "cover", height : "100%"}} /></Stack>
 
@@ -27,14 +27,18 @@ const Main = () => {
 
       <Stack justifyContent={"center"} spacing={{xs : 8 , sm : 20}} direction={{ xs: "column", sm: "row" }} width={"100%"} alignItems={"center"} >
 
-        <Button variant="contained" sx={{padding : "16px 50px" , borderRadius : "16px" , transition : ".5s" , "&:hover" : {
-          px : "60px"
-        }}}> Our Services </Button>
+        <a href="#services">
+          <Button variant="contained" sx={{padding : "16px 50px" , borderRadius : "16px" , transition : ".5s" , "&:hover" : {
+            px : "60px"
+          }}}> Our Services </Button>
+        </a>
 
-        <Button variant="outlined" sx={{padding : "16px 50px" , borderRadius : "16px" , transition : ".5s" , border : "1px solid", borderColor : "primary.white" , "&:hover" : {
-          borderColor : "primary.main",
-          px : "60px"
-        }}}> Contact Us </Button>
+        <a href="#faqs">
+          <Button variant="outlined" sx={{padding : "16px 50px" , borderRadius : "16px" , transition : ".5s" , border : "1px solid", borderColor : "primary.white" , "&:hover" : {
+            borderColor : "primary.main",
+            px : "60px"
+          }}}> Contact Us </Button>
+        </a>
 
       </Stack>
 

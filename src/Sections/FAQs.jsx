@@ -61,7 +61,7 @@ const FAQs = () => {
     } , [])
     
   return (
-    <Stack bgcolor={"#130202"} px={{xs : 10 , sm : 20 , md : 20 , lg : 50}} py={{xs : 30 , sm : 40}}>
+    <Stack bgcolor={"#130202"} px={{xs : 10 , sm : 20 , md : 20 , lg : 50}} py={{xs : 30 , sm : 40}} id="faqs">
       <Typography ref={box1} fontWeight={400} fontSize={16} lineHeight={"140%"} color={"primary.white"} textAlign={"center"} mb={8} >FAQ</Typography>
       <Typography ref={box2} fontWeight={700} fontSize={{ xs: 24, md: 32 }} lineHeight={"140%"} color={"primary.white"} textAlign={"center"} mb={20} >Have <span style={{color : "#EC1C24"}} >questions?</span> </Typography>
       <Grid container spacing={{xs : 20 , lg : 40}}>

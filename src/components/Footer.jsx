@@ -11,12 +11,12 @@ const Footer = () => {
         <img src={logo} width={140} alt="" />
         <Stack color={"primary.white"} spacing={{xs : 4 , md : 12}} textAlign={"center"} direction={{xs : "column" , sm : "row"}} my={16}>
             <NavLink to="/"><Typography sx={{transition : ".5s" , "&:hover" : {color : "primary.main" , translate : "0 -3px"}}} >Home</Typography></NavLink>
-            <NavLink to="/about"><Typography sx={{transition : ".5s" , "&:hover" : {color : "primary.main" , translate : "0 -3px"}}} >Services</Typography></NavLink>
-            <NavLink to="/events"><Typography sx={{transition : ".5s" , "&:hover" : {color : "primary.main" , translate : "0 -3px"}}} >Packages</Typography></NavLink>
-            <NavLink to="/events"><Typography sx={{transition : ".5s" , "&:hover" : {color : "primary.main" , translate : "0 -3px"}}} >How it works</Typography></NavLink>
-            <NavLink to="/events"><Typography sx={{transition : ".5s" , "&:hover" : {color : "primary.main" , translate : "0 -3px"}}} >Portfolio</Typography></NavLink>
-            <NavLink to="/events"><Typography sx={{transition : ".5s" , "&:hover" : {color : "primary.main" , translate : "0 -3px"}}} >Reviews</Typography></NavLink>
-            <NavLink to="/events"><Typography sx={{transition : ".5s" , "&:hover" : {color : "primary.main" , translate : "0 -3px"}}} >FAQs</Typography></NavLink>
+            <a href="#services"><Typography sx={{transition : ".5s" , "&:hover" : {color : "primary.main" , translate : "0 -3px"}}} >Services</Typography></a>
+            <a href="#packages"><Typography sx={{transition : ".5s" , "&:hover" : {color : "primary.main" , translate : "0 -3px"}}} >Packages</Typography></a>
+            <a href="#how"><Typography sx={{transition : ".5s" , "&:hover" : {color : "primary.main" , translate : "0 -3px"}}} >How it works</Typography></a>
+            <a href="#portfolio"><Typography sx={{transition : ".5s" , "&:hover" : {color : "primary.main" , translate : "0 -3px"}}} >Portfolio</Typography></a>
+            <a href="#reviews"><Typography sx={{transition : ".5s" , "&:hover" : {color : "primary.main" , translate : "0 -3px"}}} >Reviews</Typography></a>
+            <a href="#faqs"><Typography sx={{transition : ".5s" , "&:hover" : {color : "primary.main" , translate : "0 -3px"}}} >FAQs</Typography></a>
         </Stack>
         <Stack direction={"row"} alignItems={"center"} justifyContent={"center"} spacing={12}>
             <Box sx={{transition : "1s" , "&:hover" : {scale : "1.1" , rotate : "360deg"}}} ><img src={mail} alt="" /></Box>

@@ -43,7 +43,7 @@ const Niches = () => {
     } , [])
     
   return (
-    <Stack bgcolor={"#180203"} px={{xs : 10 , sm : 20 , md : 20 , lg : 50}} py={{xs : 30 , sm : 40}} className="niches">
+    <Stack bgcolor={"#180203"} px={{xs : 10 , sm : 20 , md : 20 , lg : 50}} py={{xs : 30 , sm : 40}} className="niches" id="niches">
       <Typography ref={box1} fontWeight={700} fontSize={{ xs: 24, md: 32 }} lineHeight={"140%"} color={"primary.white"} textAlign={"center"} mb={20} > <span style={{color : "#EC1C24"}} >Niches</span> Worked With </Typography>
       <LeftSwipe />
       <Stack height={24} ></Stack>

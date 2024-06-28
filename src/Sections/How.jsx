@@ -132,7 +132,7 @@ const How = () => {
   }, []);
   
   return (
-    <Stack px={{xs : 10 , sm : 20 , md : 20 , lg : 50}} py={{xs : 30 , sm : 40}} bgcolor={"#130202"}>
+    <Stack px={{xs : 10 , sm : 20 , md : 20 , lg : 50}} py={{xs : 30 , sm : 40}} bgcolor={"#130202"} id="how">
 
       <Typography ref={box1} fontWeight={700} fontSize={{ xs: 24, md: 32 }} lineHeight={"140%"} color={"primary.white"} textAlign={"center"} mb={20} > How it <span style={{color : "#EC1C24"}} >works</span> </Typography>
 
