@@ -38,7 +38,7 @@ const Niches = () => {
                     start: "top 80%",
                     end: "top 50%",
                     scrub: true,
-                    markers: true,
+                    markers: false,
                 }
             });
             ScrollTrigger.refresh();
