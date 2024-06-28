@@ -30,7 +30,7 @@ const Home = () => {
   return (
     <Stack overflow={"hidden"} bgcolor={"primary.bg"} visibility={"hidden"} ref={app} >
       
-        {/* <Loading />  */}
+        <Loading /> 
         <Nav />
         <Main />
         <Services />
