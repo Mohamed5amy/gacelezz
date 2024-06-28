@@ -8,6 +8,7 @@ import p6 from "../images/p6.svg"
 import { useEffect, useRef, useState } from "react"
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import Slider from "../components/Slider"
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -48,15 +49,29 @@ export const Portfolio = () => {
 
     
   } , [])
-  
+
+  const [active, setActive] = useState(false)
+  const [start, setStart] = useState(false)
+
+  const images = [p1,p2,p3,p4,p5,p6]
+  const images2 = [p6,p5,p4,p3,p2,p1]
+  const images3 = [p1,p5,p2,p3,p4,p6]
+
+  console.log(start)
   
   return (
     <Stack bgcolor={"#180203"} px={{xs : 10 , sm : 20 , md : 20 , lg : 50}} py={{xs : 30 , sm : 40}} id="portfolio">
       <Typography ref={box1} fontWeight={700} fontSize={{ xs: 24, md: 32 }} lineHeight={"140%"} color={"primary.white"} textAlign={"center"} mb={8} > Our <span style={{color : "#EC1C24"}} >Portfolio</span> </Typography>
       <Typography ref={box2} color={"text.secondary"} textAlign={"center"} mb={16}>Our video production process is designed to be seamless, collaborative, and results-driven. </Typography>
       <Taps tap={tap} setTap={setTap} />
-      {tap === 1 && <Thumbnails />}
-      {tap === 2 && <Videos />}
+      {tap === 1 && <Thumbnails setActive={setActive} data={images} setStart={setStart} tap={tap} />}
+      {tap === 2 && <Thumbnails setActive={setActive} data={images2} setStart={setStart} tap={tap} />}
+      {tap === 3 && <Thumbnails setActive={setActive} data={images3} setStart={setStart} tap={tap} />}
+
+    {(active && tap === 1) && <Slider active={active} setActive={setActive} data={images} start={start} />}
+    {(active && tap === 2) && <Slider active={active} setActive={setActive} data={images2} start={start} />}
+    {(active && tap === 3) && <Slider active={active} setActive={setActive} data={images3} start={start} />}
+      
     </Stack>
   )
 }
@@ -73,22 +88,44 @@ const Taps = ({tap , setTap}) => {
   )
 }
 
-const Thumbnails = () => {
+const Thumbnails = ({data , setActive , setStart , tap}) => {
+
+  const box1 = useRef(null)
+
+  useEffect(() => {
+
+    tap === 1 && gsap.from(box1.current, {
+      duration: 1,
+      y : 200,
+      x : -900,
+      opacity : 0,
+      rotate : "30deg"
+    });
+
+    tap === 2 && gsap.from(box1.current, {
+      duration: 1,
+      y : 200,
+      opacity : 0,
+    });
+
+    tap === 3 && gsap.from(box1.current, {
+      duration: 1,
+      y : 200,
+      x : 900,
+      opacity : 0,
+      rotate : "-30deg"
+    });
+    
+  } , [])
+  
   return (
-    <Stack>
+    <Stack ref={box1} >
       <Grid container spacing={{xs : 4 , sm : 16}}>
-        <Thumbnail img={p1} />
-        <Thumbnail img={p2} />
-        <Thumbnail img={p3} />
-        <Thumbnail img={p1} />
-        <Thumbnail img={p2} />
-        <Thumbnail img={p3} />
-        <Thumbnail img={p1} />
-        <Thumbnail img={p2} />
-        <Thumbnail img={p3} />
-        <Thumbnail img={p1} />
-        <Thumbnail img={p2} />
-        <Thumbnail img={p3} />
+        {data.map((item , i) => {
+          return (
+            <Thumbnail img={item} key={i} setActive={setActive} i={i} setStart={setStart} />
+          )
+        })}
       </Grid>
     </Stack>
   )
@@ -109,7 +146,7 @@ const getHoverDirection = (event) => {
   return directions[d];
 };
 
-const Thumbnail = ({img}) => {
+const Thumbnail = ({img , setActive , i , setStart}) => {
   
 
   useEffect(() => {
@@ -139,7 +176,7 @@ const Thumbnail = ({img}) => {
   
   
   return (
-    <Grid item xs={6} sm={6} md={4} overflow={"hidden"}>
+    <Grid item xs={6} sm={6} md={4} overflow={"hidden"} onClick={() => {setActive(true) ; setStart(i)}}>
       <Stack className="hover">
         <img src={img} alt="Portfolio Image 1" width={"100%"} height={"100%"} className="content" />
         <div className="overlay"></div>
@@ -147,34 +184,3 @@ const Thumbnail = ({img}) => {
     </Grid>
   )
 }
-
-const Videos = () => {
-  return (
-    <Stack>
-      <Grid container spacing={{xs : 4 , sm : 16}}>
-        <Thumbnail img={p4} />
-        <Thumbnail img={p5} />
-        <Thumbnail img={p6} />
-        <Thumbnail img={p4} />
-        <Thumbnail img={p5} />
-        <Thumbnail img={p6} />
-        <Thumbnail img={p4} />
-        <Thumbnail img={p5} />
-        <Thumbnail img={p6} />
-        <Thumbnail img={p4} />
-        <Thumbnail img={p5} />
-        <Thumbnail img={p6} />
-      </Grid>
-    </Stack>
-  )
-}
-
-// const Video = ({img}) => {
-  
-//   return (
-//     <Grid item item xs={6} sm={6} md={4} className="hover" overflow={"hidden"} sx={{"img" : {transition : ".5s" , "&:hover" : {scale : 1.1}}}}>
-//       <img src={img} alt="Portfolio Image 1" width={"100%"} height={"100%"} className="content" />
-//       <div className="overlay"></div>
-//     </Grid>
-//   )
-// }
