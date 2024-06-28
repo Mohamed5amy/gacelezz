@@ -21,26 +21,46 @@ import { useEffect, useRef } from "react";
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-gsap.registerPlugin(ScrollTrigger);
-
 const Niches = () => {
 
     const box1 = useRef(null)
 
     useEffect(() => {
-        gsap.from(box1.current, {
-            duration: 1,
-            y : 50,
-            opacity : 0,
-            scrollTrigger: {
-              trigger: box1.current,
-              start: "top 80%", // when the top of the element hits 80% of the viewport height
-              end: "top 50%", // when the top of the element hits 80% of the viewport height
-              scrub: true, // Makes the animation smooth
-              markers: false // Enable markers for debugging
+        gsap.registerPlugin(ScrollTrigger);
+
+        const handleAnimation = () => {
+            gsap.from(box1.current, {
+                duration: 1,
+                y: 50,
+                opacity: 0,
+                scrollTrigger: {
+                    trigger: box1.current,
+                    start: "top 80%",
+                    end: "top 50%",
+                    scrub: true,
+                    markers: true,
+                }
+            });
+            ScrollTrigger.refresh();
+        };
+
+        const handleScroll = () => {
+            if (box1.current) {
+                const topOffset = box1.current.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                if (topOffset < windowHeight) {
+                    handleAnimation();
+                    window.removeEventListener('scroll', handleScroll);
+                }
             }
-          });
-    } , [])
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
     
   return (
     <Stack bgcolor={"#180203"} px={{xs : 10 , sm : 20 , md : 20 , lg : 50}} py={{xs : 30 , sm : 40}} className="niches" id="niches">

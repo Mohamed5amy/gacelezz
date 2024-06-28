@@ -44,7 +44,7 @@ const Packages = () => {
           boxShadow: "0px 4px 24px 0px rgba(236, 28, 36, 0.40)" , 
           translate : "0 -3px",
           "svg path" : { transition : ".5s" , fill : "#EC1C24", },
-          "svg path:nth-child(1) , svg path:nth-child(2)" : {
+          "svg path:nth-of-type(1) , svg path:nth-of-type(2)" : {
             stroke : "#F5F5F5",
             fill : "transparent !important"
           },
@@ -127,7 +127,7 @@ const Packages = () => {
           boxShadow: "0px 4px 24px 0px rgba(236, 28, 36, 0.40)" , 
           translate : "0 -3px",
           "svg path" : { transition : ".5s" , fill : "#EC1C24", },
-          "svg path:nth-child(1) , svg path:nth-child(2)" : {
+          "svg path:nth-of-type(1) , svg path:nth-of-type(2)" : {
             stroke : "#F5F5F5",
             fill : "transparent !important"
           },
