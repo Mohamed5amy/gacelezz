@@ -169,7 +169,7 @@ const Services = () => {
             </svg>
 
             </Stack>
-            <Typography fontWeight={700} fontSize={20} lineHeight={"120%"} mt={20} mb={8} color={"text.primary"}>VIDEO & SEO</Typography>
+            <Typography fontWeight={700} fontSize={20} lineHeight={"120%"} mt={20} mb={8} color={"text.primary"}>Video & SEO</Typography>
             <Typography color={"text.secondary"} textAlign={"center"}>
             High-quality edited videos, each with a file containing relevant hashtags, description, and keywords for optimal video performance.
             </Typography>

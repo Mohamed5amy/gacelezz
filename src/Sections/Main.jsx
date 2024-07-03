@@ -27,7 +27,7 @@ const Main = () => {
 
       <Stack justifyContent={"center"} spacing={{xs : 8 , sm : 20}} direction={{ xs: "column", sm: "row" }} width={"100%"} alignItems={"center"} >
 
-        <a href="#services">
+        <a href="#packages">
           <Button variant="contained" sx={{padding : "16px 50px" , borderRadius : "16px" , transition : ".5s" , "&:hover" : {
             px : "60px"
           }}}> Our Services </Button>

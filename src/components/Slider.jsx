@@ -3,13 +3,15 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation , EffectFade } from 'swiper/modules';
 import p1 from "../images/p1.svg"
 import p2 from "../images/p2.svg"
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import ReactPlayer from 'react-player/youtube'
+
 gsap.registerPlugin(ScrollTrigger);
 
 
-const Slider = ({active , setActive , data , start}) => {
+const Slider = ({active , setActive , data , start , tap}) => {
 
     const box1 = useRef(null)
 
@@ -19,6 +21,30 @@ const Slider = ({active , setActive , data , start}) => {
             opacity : 0,
         });
     } , [active])
+
+    // Slider
+    const [currentSlide, setCurrentSlide] = useState(0);
+    const swiperRef = useRef(null);
+  
+    useEffect(() => {
+      if (swiperRef.current) {
+        const swiperInstance = swiperRef.current.swiper;
+  
+        // Set initial slide
+        setCurrentSlide(start);
+  
+        // Add event listener
+        swiperInstance.on('slideChange', () => {
+          setCurrentSlide(swiperInstance.activeIndex);
+          console.log(swiperInstance.activeIndex)
+        });
+  
+        return () => {
+          // Clean up event listener
+          swiperInstance.off('slideChange');
+        };
+      }
+    }, []);
     
     
   return (
@@ -29,6 +55,7 @@ const Slider = ({active , setActive , data , start}) => {
             </svg>
         </Box>
         <Swiper
+            ref={swiperRef}
             style={{
                 width : "80%",
                 minHeight : "400px",
@@ -41,9 +68,23 @@ const Slider = ({active , setActive , data , start}) => {
             modules={[Navigation , EffectFade]}
         >   
             {data.map((item , i) => {
-                return (
-                    <SwiperSlide key={i}> <Stack justifyContent={"center"} width={{xs : "100%" , md : "80%"}} minHeight={"400px"} margin={"auto"} ><img src={item} alt="" width={"100%"} height={"100%"} style={{objectFit : "contain"}} /></Stack> </SwiperSlide>
-                )
+                if (tap === 1) {
+                    return (
+                        <SwiperSlide key={i}> 
+                            <Stack justifyContent={"center"} width={{xs : "100%" , md : "80%"}} minHeight={"400px"} margin={"auto"} >
+                                <img src={item} alt="" width={"100%"} height={"100%"} style={{objectFit : "contain"}} />
+                            </Stack> 
+                        </SwiperSlide>
+                    )
+                } else {
+                    return (
+                        <SwiperSlide key={i}>
+                            <Stack justifyContent={"center"} width={{xs : "100%" , md : "80%"}} minHeight={"400px"} margin={"auto"} >
+                                <ReactPlayer url={item} width={"100%"} style={{minHeight : 400}} playing={currentSlide === i} controls />
+                            </Stack> 
+                        </SwiperSlide>
+                    )
+                }
             })}
         </Swiper>
     </Stack>

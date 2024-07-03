@@ -5,10 +5,18 @@ import p3 from "../images/p3.svg"
 import p4 from "../images/p4.svg"
 import p5 from "../images/p5.svg"
 import p6 from "../images/p6.svg"
+import p7 from "../images/p7.svg"
+import p8 from "../images/p8.svg"
+import p9 from "../images/p9.svg"
+import p10 from "../images/p10.svg"
+import p11 from "../images/p11.svg"
+import p12 from "../images/p12.svg"
 import { useEffect, useRef, useState } from "react"
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Slider from "../components/Slider"
+import ReactPlayer from 'react-player/youtube'
+
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -53,9 +61,21 @@ export const Portfolio = () => {
   const [active, setActive] = useState(false)
   const [start, setStart] = useState(false)
 
-  const images = [p1,p2,p3,p4,p5,p6]
-  const images2 = [p6,p5,p4,p3,p2,p1]
-  const images3 = [p1,p5,p2,p3,p4,p6]
+  const images = [p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12]
+  const images2 = [
+    "https://www.youtube.com/watch?v=CZJqSJDDUiQ",
+    "https://www.youtube.com/watch?v=y9KOutRjymA",
+    "https://www.youtube.com/watch?v=3keNhvpbTHw",
+    "https://www.youtube.com/watch?v=OuAo3FgHuwo",
+    "https://www.youtube.com/watch?v=XVldyN6KdEE",
+  ]
+  const images3 = [
+    "https://www.youtube.com/watch?v=CZJqSJDDUiQ",
+    "https://www.youtube.com/watch?v=y9KOutRjymA",
+    "https://www.youtube.com/watch?v=3keNhvpbTHw",
+    "https://www.youtube.com/watch?v=OuAo3FgHuwo",
+    "https://www.youtube.com/watch?v=XVldyN6KdEE",
+  ]
 
   console.log(start)
   
@@ -68,9 +88,9 @@ export const Portfolio = () => {
       {tap === 2 && <Thumbnails setActive={setActive} data={images2} setStart={setStart} tap={tap} />}
       {tap === 3 && <Thumbnails setActive={setActive} data={images3} setStart={setStart} tap={tap} />}
 
-    {(active && tap === 1) && <Slider active={active} setActive={setActive} data={images} start={start} />}
-    {(active && tap === 2) && <Slider active={active} setActive={setActive} data={images2} start={start} />}
-    {(active && tap === 3) && <Slider active={active} setActive={setActive} data={images3} start={start} />}
+    {(active && tap === 1) && <Slider active={active} setActive={setActive} data={images} start={start} tap={tap} />}
+    {(active && tap === 2) && <Slider active={active} setActive={setActive} data={images2} start={start} tap={tap} />}
+    {(active && tap === 3) && <Slider active={active} setActive={setActive} data={images3} start={start} tap={tap} />}
       
     </Stack>
   )
@@ -123,7 +143,7 @@ const Thumbnails = ({data , setActive , setStart , tap}) => {
       <Grid container spacing={{xs : 4 , sm : 16}}>
         {data.map((item , i) => {
           return (
-            <Thumbnail img={item} key={i} setActive={setActive} i={i} setStart={setStart} />
+            <Thumbnail img={item} key={i} setActive={setActive} i={i} setStart={setStart} tap={tap} />
           )
         })}
       </Grid>
@@ -146,7 +166,7 @@ const getHoverDirection = (event) => {
   return directions[d];
 };
 
-const Thumbnail = ({img , setActive , i , setStart}) => {
+const Thumbnail = ({img , setActive , i , setStart , tap}) => {
   
 
   useEffect(() => {
@@ -175,12 +195,23 @@ const Thumbnail = ({img , setActive , i , setStart}) => {
   }, []);
   
   
-  return (
-    <Grid item xs={6} sm={6} md={4} overflow={"hidden"} onClick={() => {setActive(true) ; setStart(i)}}>
-      <Stack className="hover">
-        <img src={img} alt="Portfolio Image 1" width={"100%"} height={"100%"} className="content" />
-        <div className="overlay"></div>
-      </Stack>
-    </Grid>
-  )
+  if (tap === 1) {
+    return (
+      <Grid item xs={6} sm={6} md={4} overflow={"hidden"} onClick={() => {setActive(true) ; setStart(i)}}>
+        <Stack className="hover">
+          <img src={img} alt="Portfolio Image 1" width={"100%"} height={"100%"} className="content" />
+          <div className="overlay"></div>
+        </Stack>
+      </Grid>
+    )
+  } else {
+    return (
+      <Grid item xs={6} sm={6} md={4} overflow={"hidden"} onClick={() => {setActive(true) ; setStart(i)}}>
+        <Stack className="hover">
+          <ReactPlayer url={img} width={"100%"} height={250} />
+          <div className="overlay"></div>
+        </Stack>
+      </Grid>
+    )
+  }
 }
