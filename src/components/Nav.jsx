@@ -46,8 +46,7 @@ const List = ({active , setActive}) => {
   return (
     <Stack color={"primary.white"} spacing={!active ? {md : 8 , lg : 18} : 0} direction={"row"} className={`list ${active ? "active" : "" }`} display={{ xs : "none" , md : "flex" }} ref={containerRef}>
       <a onClick={() => setActive(false)} href="/" >Home</a>
-      <a onClick={() => setActive(false)} href="#services">Services</a>
-      <a onClick={() => setActive(false)} href="#packages">Packages</a>
+      <a onClick={() => setActive(false)} href="#packages">Services</a>
       <a onClick={() => setActive(false)} href="#how">How it works</a>
       <a onClick={() => setActive(false)} href="#portfolio">Portfolio</a>
       <a onClick={() => setActive(false)} href="#reviews">Reviews</a>

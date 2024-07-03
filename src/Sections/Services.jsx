@@ -101,7 +101,7 @@ const Services = () => {
             </Stack>
             <Typography fontWeight={700} fontSize={20} lineHeight={"120%"} mt={20} mb={8} color={"text.primary"}>Script & VO</Typography>
             <Typography color={"text.secondary"} textAlign={"center"}>
-              Our Script & Voice Over (VO) service is designed to enhance your video content with engaging scripts and professional voice overs.  
+              Researched engaging scripts based on the titles provided along with 100% real male & female voiceover artists.
             </Typography>
           </Stack>
         </Grid>
@@ -131,7 +131,7 @@ const Services = () => {
             </Stack>
             <Typography fontWeight={700} fontSize={20} lineHeight={"120%"} mt={20} mb={8} color={"text.primary"}>Thumbnail</Typography>
             <Typography color={"text.secondary"} textAlign={"center"}>
-              Our thumbnail design service is dedicated to creating visually engaging and compelling thumbnails that capture the essence of your video content and attract viewers.  
+              Personalised thumbnails to increase the click-view rate of the videos and attract more viewers. 
             </Typography>
           </Stack>
         </Grid>
@@ -169,9 +169,9 @@ const Services = () => {
             </svg>
 
             </Stack>
-            <Typography fontWeight={700} fontSize={20} lineHeight={"120%"} mt={20} mb={8} color={"text.primary"}>Thumbnail</Typography>
+            <Typography fontWeight={700} fontSize={20} lineHeight={"120%"} mt={20} mb={8} color={"text.primary"}>VIDEO & SEO</Typography>
             <Typography color={"text.secondary"} textAlign={"center"}>
-              Our thumbnail design service is dedicated to creating visually engaging and compelling thumbnails that capture the essence of your video content and attract viewers.  
+            High-quality edited videos, each with a file containing relevant hashtags, description, and keywords for optimal video performance.
             </Typography>
           </Stack>
         </Grid>

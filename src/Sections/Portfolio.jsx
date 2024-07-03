@@ -62,7 +62,7 @@ export const Portfolio = () => {
   return (
     <Stack bgcolor={"#180203"} px={{xs : 10 , sm : 20 , md : 20 , lg : 50}} py={{xs : 30 , sm : 40}} id="portfolio">
       <Typography ref={box1} fontWeight={700} fontSize={{ xs: 24, md: 32 }} lineHeight={"140%"} color={"primary.white"} textAlign={"center"} mb={8} > Our <span style={{color : "#EC1C24"}} >Portfolio</span> </Typography>
-      <Typography ref={box2} color={"text.secondary"} textAlign={"center"} mb={16}>Our video production process is designed to be seamless, collaborative, and results-driven. </Typography>
+      <Typography ref={box2} color={"text.secondary"} textAlign={"center"} mb={16} sx={{textTransform : "capitalize"}} >Check Out Some Of Our Most Recent Work</Typography>
       <Taps tap={tap} setTap={setTap} />
       {tap === 1 && <Thumbnails setActive={setActive} data={images} setStart={setStart} tap={tap} />}
       {tap === 2 && <Thumbnails setActive={setActive} data={images2} setStart={setStart} tap={tap} />}
@@ -81,9 +81,9 @@ const Taps = ({tap , setTap}) => {
     <Stack spacing={{xs : 4 , sm : 12}} color={"primary.white"} direction={"row"} alignItems={"center"} justifyContent={"center"} fontWeight={800} mb={20}>
       <Typography className={`por_taps ${tap === 1 && "active"}`} fontWeight={700} fontSize={{xs : 12 , sm : 18}} onClick={() => setTap(1)}>Thumbnails</Typography>
       <span style={{color : "#453838"}}>|</span>
-      <Typography className={`por_taps ${tap === 2 && "active"}`} fontWeight={700} fontSize={{xs : 12 , sm : 18}} onClick={() => setTap(2)}>Long From Video</Typography>
+      <Typography className={`por_taps ${tap === 2 && "active"}`} fontWeight={700} fontSize={{xs : 12 , sm : 18}} onClick={() => setTap(2)}>Long Form Video</Typography>
       <span style={{color : "#453838"}}>|</span>
-      <Typography className={`por_taps ${tap === 3 && "active"}`} fontWeight={700} fontSize={{xs : 12 , sm : 18}} onClick={() => setTap(3)}>Short From Video</Typography>
+      <Typography className={`por_taps ${tap === 3 && "active"}`} fontWeight={700} fontSize={{xs : 12 , sm : 18}} onClick={() => setTap(3)}>Short Form Video</Typography>
     </Stack>
   )
 }

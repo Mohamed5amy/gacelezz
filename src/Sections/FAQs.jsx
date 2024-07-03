@@ -66,14 +66,14 @@ const FAQs = () => {
       <Typography ref={box2} fontWeight={700} fontSize={{ xs: 24, md: 32 }} lineHeight={"140%"} color={"primary.white"} textAlign={"center"} mb={20} >Have <span style={{color : "#EC1C24"}} >questions?</span> </Typography>
       <Grid container spacing={{xs : 20 , lg : 40}}>
         <Grid item xs={12} md={7.5} >
-            <FAQ q={"Can I start with no experience?"} a={"Sure, take your time. If you have any questions or need further assistance, feel free to let me know!"} />
-            <FAQ q={"Are these videos monetizable?"} a={"Sure, take your time. If you have any questions or need further assistance, feel free to let me know!"} />
-            <FAQ q={"Are the voiceover artists real or AI?"} a={"Sure, take your time. If you have any questions or need further assistance, feel free to let me know!"} />
-            <FAQ q={"Can you handle bulk orders?"} a={"Sure, take your time. If you have any questions or need further assistance, feel free to let me know!"} />
+            <FAQ q={"Can I start with no experience?"} a={"Absolutely! Contact us, and we will guide you through the process if you're a beginner, providing tips and suggestions to help you succeed."} />
+            <FAQ q={"Are these videos monetizable?"} a={"Yes, 100%. All our videos are checked for copyright compliance before submission."} />
+            <FAQ q={"Are the voiceover artists real or AI?"} a={"All our male and female artists are 100% human."} />
+            <FAQ q={"Can you handle bulk orders?"} a={"Yes, we can handle the production of up to 50 videos per week."} />
         </Grid>
         <Grid item xs={12} md={4.5} ref={box3} >
             <Box border={"1px solid #453838"} padding={"32px 24px"} borderRadius={"16px"} bgcolor={"#180203"}>
-                <Typography fontSize={{xs : 24 , sm : 32}} fontWeight={700} lineHeight={"140%"} textAlign={"center"} color={"primary.white"} mb={20}>Contact and get your first video 50% off.</Typography>
+                <Typography fontSize={{xs : 24 , sm : 32}} fontWeight={700} lineHeight={"140%"} textAlign={"center"} color={"primary.white"} mb={20}>Send Us “strategy’ To Receive A Free Growth Strategy Document For Your Channel.</Typography>
                 <Stack direction={"row"} alignItems={"center"} justifyContent={"center"} spacing={12}>
                     <Box sx={{transition : "1s" , "&:hover" : {scale : "1.1" , rotate : "360deg"}}} ><img src={insta} alt="" /></Box>
                     <Box sx={{transition : "1s" , "&:hover" : {scale : "1.1" , rotate : "360deg"}}} ><img src={whats} alt="" /></Box>
@@ -110,12 +110,12 @@ const FAQ = ({q , a}) => {
     } , [])
     
     return (
-        <Stack ref={box1} mb={active ? 2 : 8} height={active === 1 ? "250px" : "89.6px"} border={!active && "1px solid #453838"} borderRadius={"16px"} bgcolor={"#180203"} sx={{transition : ".5s" , "&:hover" : {cursor : "pointer"}}} onClick={() => active === 0 ? setActive(1) : setActive(0)} overflow={"hidden"}>
+        <Stack ref={box1} mb={active ? 2 : 8} height={{xs : active === 1 ? "250px" : "89.6px" , sm : active === 1 ? "220px" : "89.6px"}} border={!active && "1px solid #453838"} borderRadius={"16px"} bgcolor={"transparent"} sx={{transition : ".5s" , "&:hover" : {cursor : "pointer"}}} onClick={() => active === 0 ? setActive(1) : setActive(0)} overflow={"hidden"}>
             <Stack direction={"row"} alignItems={"center"} justifyContent={"space-between"} bgcolor={active && "primary.main"} padding={12} position={"relative"}>
                 <Typography fontSize={{xs : 16 , sm :20}} fontWeight={500} lineHeight={"150%"} color={"primary.white"}>{q}</Typography>
                 <IconButton color="primary" sx={{transition : ".5s" , rotate : active === 1 ? "180deg" : "0deg"}} > <KeyboardArrowDownIcon sx={{color : active === 1 ? "#F5F5F5" : "#EC1C24"}} /> </IconButton>
             </Stack>
-            <Stack p={12} border={active && "1px solid #453838"} mt={4} borderRadius={"0 0 16px 16px"}>
+            <Stack p={12} border={active && "1px solid #453838"} mt={4} borderRadius={"0 0 16px 16px"} bgcolor={"#180203"}>
                 <Typography lineHeight={"150%"} color={"text.secondary"} fontSize={{xs : 14 , sm : 20}}> {a} </Typography>
             </Stack>
         </Stack>

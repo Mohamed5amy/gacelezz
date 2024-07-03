@@ -141,10 +141,10 @@ const How = () => {
         <Stack justifyContent={"space-between"} spacing={20} direction={{xs : "column" , md : "row"}} alignItems={"center"}>
           {/* Text */}
           <Stack direction={"row"} spacing={8} alignItems={"center"} maxWidth={760}>
-            <Typography data-aos="fade-right" fontSize={128} fontWeight={700} color={"transparent"} sx={{WebkitTextStrokeWidth : "1px" , WebkitTextStrokeColor : "rgba(236, 28, 36, 0.24)"}} > 1 </Typography>
+            <Typography data-aos="fade-right" fontSize={128} fontWeight={700} color={"transparent"} sx={{WebkitTextStrokeWidth : "3px" , WebkitTextStrokeColor : "rgba(236, 28, 36, 0.24)"}} > 1 </Typography>
             <Stack spacing={12}>
               <Typography data-aos="fade-up" data-aos-delay="200" color={"primary.white"} fontSize={{xs : 18 , sm : 32}} fontWeight={700}>Get on board</Typography>
-              <Typography data-aos="fade-up" data-aos-delay="400" color={"text.secondary"}>contact us to know your vision and discuss goals and pricing.</Typography>
+              <Typography data-aos="fade-up" data-aos-delay="400" color={"text.secondary"} fontSize={{xs : 16 , sm : 18}} >contact us to know your vision and discuss goals and pricing.</Typography>
             </Stack>
           </Stack>
           {/* Logo */}
@@ -162,10 +162,10 @@ const How = () => {
         <Stack justifyContent={"space-between"} spacing={20} direction={{xs : "column" , md : "row-reverse"}} alignItems={"center"}>
           {/* Text */}
           <Stack direction={"row"} spacing={8} alignItems={"center"} maxWidth={760}>
-            <Typography data-aos="fade-right" fontSize={128} fontWeight={700} color={"transparent"} sx={{WebkitTextStrokeWidth : "1px" , WebkitTextStrokeColor : "rgba(236, 28, 36, 0.24)"}} > 2 </Typography>
+            <Typography data-aos="fade-right" fontSize={128} fontWeight={700} color={"transparent"} sx={{WebkitTextStrokeWidth : "3px" , WebkitTextStrokeColor : "rgba(236, 28, 36, 0.24)"}} > 2 </Typography>
             <Stack spacing={12}>
               <Typography data-aos="fade-up" data-aos-delay="200" color={"primary.white"} fontSize={{xs : 18 , sm : 32}} fontWeight={700}>Provide material/choose services </Typography>
-              <Typography data-aos="fade-up" data-aos-delay="400" color={"text.secondary"}>We&apos;re excited to hear from you and discuss how we can bring your vision to life through our video production services.</Typography>
+              <Typography data-aos="fade-up" data-aos-delay="400" color={"text.secondary"} fontSize={{xs : 16 , sm : 18}} >Select from our diverse range of services to get started, or share your existing materials with us for enhancement or further development.</Typography>
             </Stack>
           </Stack>
           {/* Logo */}
@@ -181,10 +181,10 @@ const How = () => {
         <Stack justifyContent={"space-between"} spacing={20} direction={{xs : "column" , md : "row"}} alignItems={"center"}>
           {/* Text */}
           <Stack direction={"row"} spacing={8} alignItems={"center"} maxWidth={760}>
-            <Typography data-aos="fade-right" fontSize={128} fontWeight={700} color={"transparent"} sx={{WebkitTextStrokeWidth : "1px" , WebkitTextStrokeColor : "rgba(236, 28, 36, 0.24)"}} > 3 </Typography>
+            <Typography data-aos="fade-right" fontSize={128} fontWeight={700} color={"transparent"} sx={{WebkitTextStrokeWidth : "3px" , WebkitTextStrokeColor : "rgba(236, 28, 36, 0.24)"}} > 3 </Typography>
             <Stack spacing={12}>
               <Typography data-aos="fade-up" data-aos-delay="200" color={"primary.white"} fontSize={{xs : 18 , sm : 32}} fontWeight={700}>Production finishes in under 48-72 hours</Typography>
-              <Typography data-aos="fade-up" data-aos-delay="400" color={"text.secondary"}>Sure, take your time. If you have any questions or need further assistance, feel free to let me know!</Typography>
+              <Typography data-aos="fade-up" data-aos-delay="400" color={"text.secondary"} fontSize={{xs : 16 , sm : 18}} >Once you choose your service, production will start. A trello board is set up for each client to follow up with the work easily. On average, this process takes 48-72 hours, depending on the speed of feedback. </Typography>
             </Stack>
           </Stack>
           {/* Logo */}
@@ -200,10 +200,10 @@ const How = () => {
         <Stack justifyContent={"space-between"} spacing={20} direction={{xs : "column" , md : "row-reverse"}} alignItems={"center"}>
           {/* Text */}
           <Stack direction={"row"} spacing={8} alignItems={"center"} maxWidth={760}>
-            <Typography data-aos="fade-right" fontSize={128} fontWeight={700} color={"#130202"} sx={{WebkitTextStrokeWidth : "1px" , WebkitTextStrokeColor : "rgba(236, 28, 36, 0.24)"}} > 4 </Typography>
+            <Typography data-aos="fade-right" fontSize={128} fontWeight={700} color={"#130202"} sx={{WebkitTextStrokeWidth : "3px" , WebkitTextStrokeColor : "rgba(236, 28, 36, 0.24)"}} > 4 </Typography>
             <Stack spacing={12}>
               <Typography data-aos="fade-up" data-aos-delay="200" color={"primary.white"} fontSize={{xs : 18 , sm : 32}} fontWeight={700}>We Provide analytics and strategies </Typography>
-              <Typography data-aos="fade-up" data-aos-delay="400" color={"text.secondary"}>Absolutely, I&apos;m here whenever you&apos;re ready. Just let me know if there&apos;s anything specific you need assistance with.</Typography>
+              <Typography data-aos="fade-up" data-aos-delay="400" color={"text.secondary"} fontSize={{xs : 16 , sm : 18}} >Based on your niche and performance, we develop strategies to enhance service quality and provide analysis to improve operational efficiency.</Typography>
             </Stack>
           </Stack>
           {/* Logo */}

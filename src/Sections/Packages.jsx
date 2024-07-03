@@ -113,7 +113,7 @@ const Packages = () => {
         </Grid>
         <Stack alignItems={"center"} mt={20}>
           <a href="#faqs">
-            <Button variant="contained" sx={{padding : "24px 80px" , borderRadius : "16px" , transition : ".5s" , "&:hover": {px : "90px"}}}> Book Now</Button>
+            <Button variant="contained" sx={{padding : "24px 80px" , borderRadius : "16px" , transition : ".5s" , "&:hover": {px : "90px"}}}>Choose Service</Button>
           </a>
         </Stack>
       </Box>
@@ -183,7 +183,7 @@ const Packages = () => {
         </Grid>
         <Stack alignItems={"center"} mt={20}>
           <a href="#faqs">
-            <Button variant="contained" sx={{padding : "24px 80px" , borderRadius : "16px" , transition : ".5s" , "&:hover": {px : "90px"}}}> Book Now</Button>
+            <Button variant="contained" sx={{padding : "24px 80px" , borderRadius : "16px" , transition : ".5s" , "&:hover": {px : "90px"}}}>Get A Quote</Button>
           </a>
         </Stack>
       </Box>
