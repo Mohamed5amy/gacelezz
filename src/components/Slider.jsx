@@ -1,8 +1,6 @@
 import { Box, Stack } from "@mui/material"
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation , EffectFade } from 'swiper/modules';
-import p1 from "../images/p1.svg"
-import p2 from "../images/p2.svg"
 import { useEffect, useRef, useState } from "react";
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -23,8 +21,9 @@ const Slider = ({active , setActive , data , start , tap}) => {
     } , [active])
 
     // Slider
-    const [currentSlide, setCurrentSlide] = useState(0);
+    const [currentSlide, setCurrentSlide] = useState(null);
     const swiperRef = useRef(null);
+    const playerRef = useRef(null);
   
     useEffect(() => {
       if (swiperRef.current) {
@@ -80,7 +79,7 @@ const Slider = ({active , setActive , data , start , tap}) => {
                     return (
                         <SwiperSlide key={i}>
                             <Stack justifyContent={"center"} width={{xs : "100%" , md : "80%"}} minHeight={"400px"} margin={"auto"} >
-                                <ReactPlayer url={item} width={"100%"} style={{minHeight : 400}} playing={currentSlide === i} controls />
+                                <ReactPlayer ref={playerRef} url={item} width={"100%"} style={{minHeight : 400}} playing={currentSlide === i} controls />
                             </Stack> 
                         </SwiperSlide>
                     )

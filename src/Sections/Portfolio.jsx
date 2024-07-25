@@ -63,21 +63,24 @@ export const Portfolio = () => {
 
   const images = [p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12]
   const images2 = [
-    "https://www.youtube.com/watch?v=CZJqSJDDUiQ",
-    "https://www.youtube.com/watch?v=y9KOutRjymA",
-    "https://www.youtube.com/watch?v=3keNhvpbTHw",
-    "https://www.youtube.com/watch?v=OuAo3FgHuwo",
-    "https://www.youtube.com/watch?v=XVldyN6KdEE",
+    "https://www.youtube.com/watch?v=KBfm5UfwenY",
+    "https://www.youtube.com/watch?v=Mx4dbj49LMQ",
+    "https://www.youtube.com/watch?v=zKCYNfGJoF4",
+    "https://www.youtube.com/watch?v=mvgbxf5Zp_k",
+    "https://www.youtube.com/watch?v=76LqgBWUvDE",
+    "https://www.youtube.com/watch?v=y73bhXd6jss",
+    "https://www.youtube.com/watch?v=Uem1AWujpkU",
+    "https://www.youtube.com/watch?v=f71q5tYNjWQ",
+    "https://www.youtube.com/watch?v=vVDtq4fwj7w",
+    "https://www.youtube.com/watch?v=xEwNe08gXMM",
+    "https://www.youtube.com/watch?v=j6Dg7nNz_U8",
   ]
   const images3 = [
-    "https://www.youtube.com/watch?v=CZJqSJDDUiQ",
-    "https://www.youtube.com/watch?v=y9KOutRjymA",
-    "https://www.youtube.com/watch?v=3keNhvpbTHw",
-    "https://www.youtube.com/watch?v=OuAo3FgHuwo",
-    "https://www.youtube.com/watch?v=XVldyN6KdEE",
+    "https://www.youtube.com/shorts/Y8D-k_qKEdE",
+    "https://www.youtube.com/shorts/fnDq--E5yuo",
+    "https://www.youtube.com/shorts/PzrqFrTOQ3A",
   ]
 
-  console.log(start)
   
   return (
     <Stack bgcolor={"#180203"} px={{xs : 10 , sm : 20 , md : 20 , lg : 50}} py={{xs : 30 , sm : 40}} id="portfolio">
