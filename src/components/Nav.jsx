@@ -15,7 +15,7 @@ const Nav = () => {
       {/* Middle List */}
       <List active={active} setActive={setActive} />
       {/* Right Button */}
-      <a href="#contact">
+      <a href="#faqs">
       <Button variant="outlined" sx={{padding : {md : "12px 24px" , lg : "16px 54px"} , borderRadius : "16px" , transition : ".5s" , display : {xs : "none" , md : "block"} , "&:hover" : {
         color : "primary.white",
         bgcolor : "primary.main"

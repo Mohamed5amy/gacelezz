@@ -75,9 +75,9 @@ const FAQs = () => {
             <Box border={"1px solid #453838"} padding={"32px 24px"} borderRadius={"16px"} bgcolor={"#180203"}>
                 <Typography fontSize={{xs : 24 , sm : 32}} fontWeight={700} lineHeight={"140%"} textAlign={"center"} color={"primary.white"} mb={20}>Send Us “strategy’ To Receive A Free Growth Strategy Document For Your Channel.</Typography>
                 <Stack direction={"row"} alignItems={"center"} justifyContent={"center"} spacing={12}>
-                    <Box sx={{transition : "1s" , "&:hover" : {scale : "1.1" , rotate : "360deg"}}} ><img src={insta} alt="" /></Box>
-                    <Box sx={{transition : "1s" , "&:hover" : {scale : "1.1" , rotate : "360deg"}}} ><img src={whats} alt="" /></Box>
-                    <Box sx={{transition : "1s" , "&:hover" : {scale : "1.1" , rotate : "360deg"}}} ><img src={mail} alt="" /></Box>
+                    <a href="https://www.instagram.com/gacelezz?igsh=MTRtcnMwaTAwdnEzNg==" target="_blank" rel="noreferrer"><Box sx={{transition : "1s" , "&:hover" : {scale : "1.1" , rotate : "360deg"}}} ><img src={insta} alt="" /></Box></a>
+                    <a href="https://wa.me/+17133869308" target="_blank" rel="noreferrer"><Box sx={{transition : "1s" , "&:hover" : {scale : "1.1" , rotate : "360deg"}}} ><img src={whats} alt="" /></Box></a>
+                    <a href="mailto:info@gacelezz.com" target="_blank" rel="noreferrer"><Box sx={{transition : "1s" , "&:hover" : {scale : "1.1" , rotate : "360deg"}}} ><img src={mail} alt="" /></Box></a>
                 </Stack>
             </Box>
         </Grid>
