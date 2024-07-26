@@ -79,6 +79,7 @@ export const Portfolio = () => {
     "https://www.youtube.com/shorts/Y8D-k_qKEdE",
     "https://www.youtube.com/shorts/fnDq--E5yuo",
     "https://www.youtube.com/shorts/PzrqFrTOQ3A",
+    "https://www.youtube.com/shorts/L5JxnCZuaDY"
   ]
 
   

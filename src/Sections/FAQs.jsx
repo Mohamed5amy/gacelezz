@@ -61,7 +61,7 @@ const FAQs = () => {
     } , [])
     
   return (
-    <Stack bgcolor={"#130202"} px={{xs : 10 , sm : 20 , md : 20 , lg : 50}} py={{xs : 30 , sm : 40}} id="faqs">
+    <Stack bgcolor={"#130202"} px={{xs : 10 , sm : 20 , md : 20 , lg : 50}} py={{xs : 30 , sm : 40}}>
       <Typography ref={box1} fontWeight={400} fontSize={16} lineHeight={"140%"} color={"primary.white"} textAlign={"center"} mb={8} >FAQ</Typography>
       <Typography ref={box2} fontWeight={700} fontSize={{ xs: 24, md: 32 }} lineHeight={"140%"} color={"primary.white"} textAlign={"center"} mb={20} >Have <span style={{color : "#EC1C24"}} >questions?</span> </Typography>
       <Grid container spacing={{xs : 20 , lg : 40}}>
@@ -71,7 +71,7 @@ const FAQs = () => {
             <FAQ q={"Are the voiceover artists real or AI?"} a={"All our male and female artists are 100% human."} />
             <FAQ q={"Can you handle bulk orders?"} a={"Yes, we can handle the production of up to 50 videos per week."} />
         </Grid>
-        <Grid item xs={12} md={4.5} ref={box3} >
+        <Grid item xs={12} md={4.5} ref={box3} id="faqs">
             <Box border={"1px solid #453838"} padding={"32px 24px"} borderRadius={"16px"} bgcolor={"#180203"}>
                 <Typography fontSize={{xs : 24 , sm : 32}} fontWeight={700} lineHeight={"140%"} textAlign={"center"} color={"primary.white"} mb={20}>Send Us “strategy’ To Receive A Free Growth Strategy Document For Your Channel.</Typography>
                 <Stack direction={"row"} alignItems={"center"} justifyContent={"center"} spacing={12}>
