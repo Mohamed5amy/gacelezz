@@ -103,9 +103,9 @@ const Reviews = () => {
         <SwiperSlide>
             <Box p={"24px"} bgcolor={"#130202"} border={"1px solid #453838"} borderRadius={"16px"} sx={{transition : ".5s" , "&:hover" : {borderColor : "primary.main"}}}>
                 <Stack direction={"row"} alignItems={"Center"} spacing={6} mb={12}>
-                    <img src={r3} alt="" style={{borderRadius : "50%" , width : 45 , height : 45 , objectFit : "cover"}} />
+                    <img src={r4} alt="" style={{borderRadius : "50%" , width : 45 , height : 45 , objectFit : "cover"}} />
                     <Stack direction={{xs : "column" , lg : "row"}} spacing={{xs : 0 , lg : 6}}>
-                        <Typography fontWeight={600} color={"primary.white"} >Bodycam Crime</Typography>
+                        <Typography fontWeight={600} color={"primary.white"} >Philosophy In Use</Typography>
                     </Stack>
                 </Stack>
                 <Typography fontSize={18}  color={"primary.white"}>The Gacelezz team really goes above and beyond. They takes the time to produce quality work and also provides feedback on what we can do better. They’re great with communication and very easy to work with.</Typography>
@@ -114,9 +114,9 @@ const Reviews = () => {
         <SwiperSlide>
             <Box p={"24px"} bgcolor={"#130202"} border={"1px solid #453838"} borderRadius={"16px"} sx={{transition : ".5s" , "&:hover" : {borderColor : "primary.main"}}}>
                 <Stack direction={"row"} alignItems={"Center"} spacing={6} mb={12}>
-                    <img src={r4} alt="" style={{borderRadius : "50%" , width : 45 , height : 45 , objectFit : "cover"}} />
+                    <img src={r3} alt="" style={{borderRadius : "50%" , width : 45 , height : 45 , objectFit : "cover"}} />
                     <Stack direction={{xs : "column" , lg : "row"}} spacing={{xs : 0 , lg : 6}}>
-                        <Typography fontWeight={600} color={"primary.white"} >Philosophy In Use</Typography>
+                        <Typography fontWeight={600} color={"primary.white"} >Bodycam Crime</Typography>
                     </Stack>
                 </Stack>
                 <Typography fontSize={18}  color={"primary.white"}>Man, WOW..Truly blown away with the quality of Gacelezz’s work. They exceeded my expectations in every way possible. Thanks again we&apos;ll definitely be back!</Typography>
