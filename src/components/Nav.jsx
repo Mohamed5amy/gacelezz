@@ -15,10 +15,12 @@ const Nav = () => {
       {/* Middle List */}
       <List active={active} setActive={setActive} />
       {/* Right Button */}
+      <a href="#contact">
       <Button variant="outlined" sx={{padding : {md : "12px 24px" , lg : "16px 54px"} , borderRadius : "16px" , transition : ".5s" , display : {xs : "none" , md : "block"} , "&:hover" : {
         color : "primary.white",
         bgcolor : "primary.main"
       }}}> Contact Us </Button>
+      </a>
       {/* Menu Icon */}
       <MenuIcon onClick={() => setActive(!active)} sx={{
           display : { xs : "block" , md : "none" },
